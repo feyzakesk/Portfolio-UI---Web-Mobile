@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+:root{
+    --dark:#21243D;
+    --red:#FF6464;
+    --secondary:#00A8CC;
+    --light:#00A8CC;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+}
+p, h1, h2{
+    color: var(--dark);
+
+}
+p{
+    font-weight: 400;
+}
+.main-heading{
+    font-size: 20px;
+}
+li{
+    list-style: none;
+}
+
+nav{
+    height: 100px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    
+}
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    background-color: var(--dark);
+    color: white;
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.menu ul li a:hover {
+    color: var(--red);
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--red);
+    cursor: pointer;
+}
+
+
+header{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    text-align: center;
+    gap: 2rem;
+}
+.avatar img{
+    width: 200px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+.description h1{
+    padding: 0 1.7rem;
+}
+#download-resume{
+    background-color: #FF6464;
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    padding: 1rem;
+    width: 200px;
+    font-size: 1.2rem;
+}
+.main-first{
+    background-color: #EDF7FA;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    gap: 1rem;
+}
+.main-first-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--dark);
+    padding: 1rem 1rem;
+    gap: 1rem;
+    
+}
+.box h2{
+    font-weight: bold;
+}
+.main-second{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.main-second-top{
+    text-align: center;
+}
+.main-second-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem;
+    gap: 2rem;
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.boxes div{
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+}
+.boxes div span{
+    background-color: var(--dark);
+    color: white;
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+}
+.boxes-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+.boxes-right div p{
+    opacity: .5;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+.links ul{
+    display: flex;
+    gap: 2rem;
+}
+.links ul li{
+    display: flex;
+    font-size: 2rem;
+    
+}
+.links ul li i{
+    color: var(--dark);
+}
+hr{
+    color: var(--dark);
+    font-size: 1rem;
+    width: 95%;
+    opacity: .5;
+}
+/* 768px ve üzeri ekran genişliği için stil ayarları */
+@media (min-width: 768px) {
+    nav {
+        justify-content: flex-end;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        color: var(--dark);
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .menu ul li {
+        margin: 0;
+    }
+
+    .menu ul li a {
+        color: var(--dark);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .menu ul li a:hover {
+        color: var(--red);
+    }
+
+    .close-menu {
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .avatar{
+        order:2;
+    }
+    .avatar img{
+        width: 250px;
+        margin-left: 50px;
+    }
+    .description{
+        order: 1;
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 15rem;
+    }
+    .main-first{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    .main-first-top{
+        margin-left: 230px;
+    }
+    .main-first-bottom{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 7rem;
+        margin-left: 120px;
+    }
+    .box{
+        width: 500px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .main-second{
+        display: flex;
+        flex-direction: column; 
+    }
+    .main-second-top{
+        text-align: left;
+        margin-left: 260px;
+        padding-top: 2rem;
+    }
+    
+    .main-second-bottom{
+        display: flex;
+       
+    }
+    .boxes{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 15rem;
+
+    }
+    .boxes-right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    hr{
+        width: 70%;
+    }
+}
+
+
+
