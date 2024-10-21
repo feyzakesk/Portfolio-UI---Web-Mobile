@@ -18,6 +18,10 @@ p, h1, h2{
 p{
     font-weight: 400;
 }
+a{
+    text-decoration: none;
+     color: inherit; 
+}
 .main-heading{
     font-size: 20px;
 }
@@ -181,6 +185,10 @@ header{
 .boxes-right div p{
     opacity: .5;
 }
+.boxes-right h2 a:hover{
+    color: var(--red);
+    transition: 0.3s;
+}
 footer{
     display: flex;
     flex-direction: column;
@@ -206,6 +214,52 @@ hr{
     font-size: 1rem;
     width: 95%;
     opacity: .5;
+}
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    gap: 2rem;
+}
+.blog-main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.blog-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.blog-box div{
+    display: flex;
+    flex-direction: row;
+}
+.blog-box h1{
+    font-weight: 500;
+    font-size: 26px;
+}
+.blog-box div span{
+    opacity: .3;
+}
+.work-detail-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+}
+.work-detail-container .boxes span{
+    background-color: var(--red);
+    color: white; 
+}
+.work-detail-container .boxes div p{
+    color: var(--dark);
+    opacity: 1; 
+}
+.work-detail-container-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 /* 768px ve üzeri ekran genişliği için stil ayarları */
 @media (min-width: 768px) {
@@ -318,6 +372,18 @@ hr{
     hr{
         width: 70%;
     }
+    .blog-container{
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 15rem;
+        gap: 3rem;
+    }
+    .blog-main{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
 }
 
 
